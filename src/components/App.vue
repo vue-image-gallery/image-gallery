@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <Home />
-    <Albums />
+  <Header />
+  <RouterView></RouterView>
   </div>
+  
 </template>
 
 <script>
-import Home from './home/Home';
-import Albums from './albums/Albums';
+import Header from './Header';
 
 export default {
   name: 'app',
   components: {
-    Home,
-    Albums
+ 
+    Header
   }
 };
 </script>
