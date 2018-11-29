@@ -1,12 +1,23 @@
 <template>
     <div>
-        <p>I am Albums</p>
+        <h2>Image Albums</h2>
+        <AlbumList :albums="albums"/>
     </div>
 </template>
 
 <script>
-export default {
+import albumsApi from '../../services/albumsApi';
+import AlbumList from './AlbumList';
 
+export default {
+  data() {
+    return {
+      albums: albumsApi.getAlbums()
+    };
+  },
+  components: {
+    AlbumList
+  }
 };
 </script>
 
