@@ -7,7 +7,11 @@
     </p>
     <div v-if="showModal" class="modal">
       <div class="content">
-        <AddImage :onAdd="handleImageAdd"/>
+        <AddImage 
+            :onAdd="handleImageAdd"
+            :onClose="() => showModal = false"
+        />
+
       </div>
     </div>
     <Thumbnails

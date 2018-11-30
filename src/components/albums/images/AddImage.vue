@@ -1,5 +1,6 @@
 <template>
     <form @submit.prevent="onAdd(image)">
+        <button class="close" @click="onClose">X</button>
         <label>
             <span>Title: <input v-model="image.title"></span>
         </label>
