@@ -1,13 +1,13 @@
 <template>
     <div>
-        <h3>I'm a ThumbnailView</h3>
+        <h3>I'm a ListView</h3>
         <ul>
             <li
                 v-for="(image, index) in images"
                 :key="index">
-                <h4>{{image.title}}</h4>
+                <p>{{image.title}}<p>
                 <p>
-                    <img :src="image.url">
+                    <!-- <img :src="image.url"> -->
                 </p>
             </li>
         </ul>

@@ -14,16 +14,17 @@
       </div>
 
     </div>
-    <RouterLink to="./thumbnail">Thumbnail</RouterLink>
+    <nav>
+      <RouterLink to="./thumbnail">Thumbnail</RouterLink>
+      <RouterLink to="./list">List</RouterLink>
+      <RouterLink to="./gallery">Gallery</RouterLink>
+    </nav>
     <RouterView :images="album.images">DEFAULT VIEW</RouterView>
-    <!-- <ThumbnailView
-    :images="album.images" /> -->
     </section>
 </template>
 
 <script>
 import albumsApi from '../../services/albumsApi';
-// import ThumbnailView from './images/ThumbnailView';
 import AddImage from './images/AddImage';
 
 export default {
@@ -35,7 +36,7 @@ export default {
   },
 
   components:{
-    // ThumbnailView,
+
     AddImage
   },
   created() {
