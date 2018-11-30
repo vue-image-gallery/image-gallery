@@ -7,7 +7,7 @@
     </p>
     <div v-if="showModal" class="modal">
       <div class="content">
-        Form data goes here.
+        <AddImage />
       </div>
     </div>
     <Thumbnails
@@ -18,6 +18,7 @@
 <script>
 import albumsApi from '../../services/albumsApi';
 import Thumbnails from './Thumbnails';
+import AddImage from './images/AddImage';
 
 export default {
   data() {
@@ -28,7 +29,8 @@ export default {
   },
 
   components:{
-    Thumbnails
+    Thumbnails,
+    AddImage
   },
   created() {
     this.album = albumsApi.getAlbum(this.$route.params.id);
