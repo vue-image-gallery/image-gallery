@@ -12,16 +12,18 @@
             :onClose="() => showModal = false"
         />
       </div>
-      <RouterLink to="./thumbnail">Thumbnail</RouterLink>
+
     </div>
-    <ThumbnailView
-    :images="album.images" />
+    <RouterLink to="./thumbnail">Thumbnail</RouterLink>
+    <RouterView :images="album.images">DEFAULT VIEW</RouterView>
+    <!-- <ThumbnailView
+    :images="album.images" /> -->
     </section>
 </template>
 
 <script>
 import albumsApi from '../../services/albumsApi';
-import ThumbnailView from './images/ThumbnailView';
+// import ThumbnailView from './images/ThumbnailView';
 import AddImage from './images/AddImage';
 
 export default {
@@ -33,7 +35,7 @@ export default {
   },
 
   components:{
-    ThumbnailView,
+    // ThumbnailView,
     AddImage
   },
   created() {
