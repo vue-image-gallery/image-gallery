@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="onAdd(image)">
-        <button class="close" @click="onClose">X</button>
+        <button class="close" type="reset" @click="onClose">X</button>
         <label>
             <span>Title: <input v-model="image.title"></span>
         </label>
@@ -24,7 +24,8 @@ export default {
     };
   },
   props: {
-    onAdd: Function
+    onAdd: Function,
+    onClose: Function
   }
 };
 </script>

@@ -11,17 +11,17 @@
             :onAdd="handleImageAdd"
             :onClose="() => showModal = false"
         />
-
       </div>
+      <RouterLink to="./thumbnail">Thumbnail</RouterLink>
     </div>
-    <Thumbnails
+    <ThumbnailView
     :images="album.images" />
     </section>
 </template>
 
 <script>
 import albumsApi from '../../services/albumsApi';
-import Thumbnails from './Thumbnails';
+import ThumbnailView from './images/ThumbnailView';
 import AddImage from './images/AddImage';
 
 export default {
@@ -33,7 +33,7 @@ export default {
   },
 
   components:{
-    Thumbnails,
+    ThumbnailView,
     AddImage
   },
   created() {
