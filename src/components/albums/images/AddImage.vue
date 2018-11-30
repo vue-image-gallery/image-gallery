@@ -1,11 +1,11 @@
 <template>
     <form @submit.prevent="onAdd(image)">
-        <lable>
+        <label>
             <span>Title: <input v-model="image.title"></span>
-        </lable>
-         <lable>
+        </label>
+         <label>
             <span>Url: <input v-model="image.url"></span>
-        </lable>
+        </label>
         <button>ADD</button>
      </form>
         

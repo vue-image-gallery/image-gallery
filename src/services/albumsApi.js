@@ -21,6 +21,10 @@ export default {
   },
   getAlbum(id) {
     return albums.find(album => album.id === id);
+  },
+  addImage(image, album) {
+    album.images.push(image);
+    save();
   }
 };
 

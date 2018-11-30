@@ -7,7 +7,7 @@
     </p>
     <div v-if="showModal" class="modal">
       <div class="content">
-        <AddImage />
+        <AddImage :onAdd="handleImageAdd"/>
       </div>
     </div>
     <Thumbnails
@@ -34,6 +34,13 @@ export default {
   },
   created() {
     this.album = albumsApi.getAlbum(this.$route.params.id);
+  },
+  methods: {
+    handleImageAdd(image) {
+      console.log('the album is ', this.album);
+      albumsApi.addImage(image, this.album);
+      this.showModal = false;
+    }
   }
 };
 </script>
