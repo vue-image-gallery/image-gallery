@@ -1,14 +1,16 @@
 <template>
     <section v-if="album">
     <nav>
+      <p>Choose a view: 
       <RouterLink to="./thumbnail">Thumbnail</RouterLink>
       <RouterLink to="./list">List</RouterLink>
       <RouterLink to="./gallery">Gallery</RouterLink>
+      </p>
     </nav>
     <h2>{{album.title}}</h2>
     <p>{{album.description}}<p>
     <p>
-      <button @click="showModal = true">Add a new Image</button>
+      <button class="add" @click="showModal = true">Add a new Image</button>
     </p>
     <Modal v-if="showModal" :onClose="() => showModal = false">
       <AddImage 
@@ -62,5 +64,13 @@ export default {
   }
   .content {
     background: white;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .add {
+    margin-top: 30px;
   }
 </style>
