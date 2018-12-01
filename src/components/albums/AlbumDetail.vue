@@ -5,15 +5,11 @@
     <p>
       <button @click="showModal = true">Add a new Image</button>
     </p>
-    <div v-if="showModal" class="modal">
-      <div class="content">
-        <AddImage 
+    <Modal v-if="showModal" :onClose="() => showModal = false">
+      <AddImage 
             :onAdd="handleImageAdd"
-            :onClose="() => showModal = false"
-        />
-      </div>
-
-    </div>
+            />
+    </Modal>
     <nav>
       <RouterLink to="./thumbnail">Thumbnail</RouterLink>
       <RouterLink to="./list">List</RouterLink>
@@ -26,6 +22,7 @@
 <script>
 import albumsApi from '../../services/albumsApi';
 import AddImage from './images/AddImage';
+import Modal from '../shared/Modal';
 
 export default {
   data() {
@@ -36,7 +33,7 @@ export default {
   },
 
   components:{
-
+    Modal,
     AddImage
   },
   created() {

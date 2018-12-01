@@ -2,14 +2,9 @@
     <div>
         <h2>Image Albums</h2>
         <button @click="showModal = true">Add a new Album</button>
-        <div v-if="showModal" class="modal">
-              <div class="content">
-                      <NewAlbum 
-                         
-                          :onClose="() => showModal = false"
-                      />
-              </div>
-        </div>
+        <Modal v-if="showModal" :onClose="() => showModal = false">
+                      <NewAlbum />
+        </Modal>
         <AlbumList :albums="albums"/>
       </div>
 </template>
@@ -18,6 +13,8 @@
 import albumsApi from '../../services/albumsApi';
 import AlbumList from './AlbumList';
 import NewAlbum from './NewAlbum';
+import Modal from '../shared/Modal';
+
 
 export default {
   data() {
@@ -28,7 +25,8 @@ export default {
   },
   components: {
     NewAlbum,
-    AlbumList
+    AlbumList,
+    Modal
 
   }
 };
