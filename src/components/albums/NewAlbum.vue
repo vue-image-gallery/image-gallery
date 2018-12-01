@@ -1,6 +1,7 @@
 <template>
     <form @submit.prevent="handleSubmit">
-        <input v-model="album.title">
+        Title: <input v-model="album.title">
+        Description: <input v-model="album.description">
         <button>ADD</button>
     </form>
 
@@ -12,8 +13,8 @@ export default {
   data() {
     return {
       album: {
-        title: ''
-
+        title: '',
+        description: ''
       }
     };
   },

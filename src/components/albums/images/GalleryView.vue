@@ -3,10 +3,10 @@
     <div class="gallery">
         <div class="buttons">
             <button @click="setIndex(-1)">Previous</button>
-            <button @click="setIndex(1)">Next</button>
+            <button class="next" @click="setIndex(1)">Next</button>
         </div>
         <img :src="image.url">
-        <p>{{image.title}}</p>
+        <p class="title">{{image.title}}</p>
         <p>{{image.description}}</p>
     </div>
 </section>
@@ -61,4 +61,14 @@ ul {
     width: 100%;
     height: 100%;
 }
+
+.buttons {
+    justify-content: flex-end;
+}
+
+.title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
 </style>

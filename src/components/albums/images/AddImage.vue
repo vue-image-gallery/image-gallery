@@ -3,6 +3,9 @@
         <label>
             <span>Title: <input v-model="image.title"></span>
         </label>
+        <label>
+            <span>Description: <input v-model="image.description"></span>
+        </label>
          <label>
             <span>Url: <input v-model="image.url"></span>
         </label>
@@ -18,6 +21,7 @@ export default {
     return {
       image:{
         title: '',
+        description: '',
         url: ''
       }
     };
