@@ -6,6 +6,7 @@
       <RouterLink to="./gallery">Gallery</RouterLink>
     </nav>
     <h2>{{album.title}}</h2>
+    <p>{{album.description}}<p>
     <p>
       <button @click="showModal = true">Add a new Image</button>
     </p>
@@ -61,6 +62,5 @@ export default {
   }
   .content {
     background: white;
-    padding: 50px;
   }
 </style>

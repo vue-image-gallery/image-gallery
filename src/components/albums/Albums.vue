@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h2>Image Albums</h2>
+    <div class="albums">
         <button @click="showModal = true">Add a new Album</button>
+        <h2>Albums</h2>
         <Modal v-if="showModal" :onClose="() => showModal = false">
                       <NewAlbum />
         </Modal>
@@ -33,5 +33,9 @@ export default {
 </script>
 
 <style>
+
+.albums {
+    margin-left: 20px;
+}
 
 </style>

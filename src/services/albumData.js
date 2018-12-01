@@ -18,12 +18,34 @@ export default [
   ] },
   { id: 'spiders', title: 'Spiders Album', description: 'A series of spider pictures', images: [    
     { 
-      title: 'A spider', 
-      url: 'http://www.bendbulletin.com/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=mhcJCVJ8KKHRPwwqAnbx98$daE2N3K4ZzOUsqbU5sYuoqiCu3qMqMhalP7QIUjCsWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&CONTENTTYPE=image/jpeg' 
-    },
+      title: 'HAND SPIDER', 
+      url: 'https://img.washingtonpost.com/wp-apps/imrs.php?src=https://img.washingtonpost.com/news/morning-mix/wp-content/uploads/sites/21/2015/12/Merlin_1398709.jpg&w=480',
+      description: 'This spider lives on this person’s hand. It must make washing the dishes very difficult.' 
+    }, 
+    {
+      title: 'CRAB SPIDER', 
+      url: 'https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_960,f_auto/55045735_gt1rye_bmcpw0.jpg',
+      description: 'It may look like a crab, but this is a spider. Note the lack of claws.'
+    }, 
+    {
+      title: 'SPINY ORB-WEAVER', 
+      url: 'https://media.mnn.com/assets/images/2018/02/spiny-spider-Gasteracantha-versicolor-madagascar.jpg.653x0_q80_crop-smart.jpg',
+      description: 'A perfectly normal looking spider. Nothing unusual here.' 
+    }] },
+  { id: 'crows', title: 'Crows Album', description: 'A collection of crow pictures', images: [    
     { 
-      title: 'Another spider', 
-      url: 'http://www.bendbulletin.com/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=mhcJCVJ8KKHRPwwqAnbx98$daE2N3K4ZzOUsqbU5sYuoqiCu3qMqMhalP7QIUjCsWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&CONTENTTYPE=image/jpeg' 
+      title: 'HAND CROW', 
+      url: 'http://clipson.org.uk/wp-content/uploads/2014/08/crowHand.png',
+      description: 'This crow lives on this person’s hand. I must make taking a shower very difficult.' 
+    }, 
+    {
+      title: 'CROW ON EAGLE', 
+      url: 'https://images.earthtouchnews.com/media/734912/tawny-eagle-and-cape-crow.jpg',
+      description: 'Most crows save energy by flying on other birds, like this friendly eagle, for instance.'
+    }, 
+    {
+      title: 'CROW COMMUNICATION', 
+      url: 'https://baynature.org/wp-content/uploads/2014/04/Raven-3037.jpg',
+      description: 'Crows communicate by making funny faces at each other, like this.' 
     }] }
-
 ];
