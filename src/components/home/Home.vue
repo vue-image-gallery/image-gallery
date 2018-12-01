@@ -6,6 +6,7 @@
         <nav class="look">
             <RouterLink to="/albums">TAKE A LOOK</RouterLink>
         </nav>
+        <p class="trigger"><strong>Trigger warning:</strong> may contain spiders.</p>
     </div>
 </template>
 
@@ -29,10 +30,11 @@ export default {
 
 h1 {
     font-size: 4em;
+    margin-top: 10px;
 }
 
 .look {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 1.2em;
     border: 1px solid black;
     background: #DCC48E;
@@ -45,5 +47,10 @@ h1 {
 
 .look:hover {
     background: #EAEFD3;
+}
+
+.trigger {
+    margin-top: 20px;
+    font-size: .6em;
 }
 </style>

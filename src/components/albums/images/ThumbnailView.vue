@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h3>I'm a ThumbnailView</h3>
         <ul>
             <li
                 v-for="(image, index) in images"
@@ -9,6 +8,7 @@
                 <p>
                     <img :src="image.url">
                 </p>
+                <p>{{image.description}}</p>
             </li>
         </ul>
     </div>

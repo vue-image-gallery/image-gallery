@@ -1,12 +1,14 @@
 <template>
 <section>
-    <h3>Gallery View</h3>
-    {{selectedIndex}}
-    <p>
-        <button @click="setIndex(-1)">&lt;</button>
-            <img :src="image.url">
-        <button @click="setIndex(1)">&gt;</button>
-    </p>
+    <div class="gallery">
+        <div class="buttons">
+            <button @click="setIndex(-1)">Previous</button>
+            <button @click="setIndex(1)">Next</button>
+        </div>
+        <img :src="image.url">
+        <p>{{image.title}}</p>
+        <p>{{image.description}}</p>
+    </div>
 </section>
 </template>
 
@@ -40,9 +42,23 @@ export default {
 </script>
 
 <style>
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 ul {
     list-style-type: none;
 }
 
+.gallery {
+    justify-content: center;
+    width: 500px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+}
 </style>
