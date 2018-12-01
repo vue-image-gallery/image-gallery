@@ -5,7 +5,7 @@
         <div v-if="showModal" class="modal">
               <div class="content">
                       <NewAlbum 
-                          :onAdd="handleAlbumAdd"
+                         
                           :onClose="() => showModal = false"
                       />
               </div>
