@@ -1,8 +1,7 @@
 import albumData from './albumData';
 import shortid from 'shortid';
 
-//check if we got 
-console.log('I should be a fan of this', json);
+
 const json = window.localStorage.getItem('albums');
 let albums = null;
 if(json) {

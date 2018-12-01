@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     handleImageAdd(image) {
-      console.log('the album is ', this.album);
       albumsApi.addImage(image, this.album);
       this.showModal = false;
     }
