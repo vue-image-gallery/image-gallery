@@ -1,5 +1,5 @@
 import albumData from './albumData';
-// import shortid from 'shortid';
+import shortid from 'shortid';
 
 //check if we got 
 console.log('I should be a fan of this', json);
@@ -21,6 +21,13 @@ export default {
   },
   getAlbum(id) {
     return albums.find(album => album.id === id);
+  },
+  add(album) {
+    album.id = shortid.generate();
+    album.images = [];
+    albums.push(album);
+    save();
+    return album;
   },
   addImage(image, album) {
     album.images.push(image);
