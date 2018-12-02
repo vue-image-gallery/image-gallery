@@ -2,7 +2,7 @@
 <template>
     <div class="welcome-screen">
         <p>Michael & Hans present a</p>
-        <h1>SUPER ANIMAL GALLERY</h1>
+        <h1 class="home-header">SUPER ANIMAL GALLERY</h1>
         <nav class="look">
             <RouterLink to="/albums">TAKE A LOOK</RouterLink>
         </nav>
@@ -28,7 +28,7 @@ export default {
     color: #505168;
 }
 
-h1 {
+.home-header {
     font-size: 4em;
     margin-top: 10px;
 }

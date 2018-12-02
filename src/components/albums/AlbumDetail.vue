@@ -1,13 +1,13 @@
 <template>
     <section v-if="album">
-    <nav>
+    <nav class="navigation">
       <p>Choose a view: 
       <RouterLink to="./thumbnail">Thumbnail</RouterLink>
       <RouterLink to="./list">List</RouterLink>
       <RouterLink to="./gallery">Gallery</RouterLink>
       </p>
     </nav>
-    <h2>{{album.title}}</h2>
+    <h2 class="album-title">{{album.title}}</h2>
     <p>{{album.description}}<p>
     <p>
       <button class="add" @click="showModal = true">Add a new Image</button>
@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss" scoped>
   .modal {
     position: fixed;
     top: 0;
@@ -66,11 +66,23 @@ export default {
     background: white;
   }
 
-  h2 {
+  .album-title {
     margin-bottom: 5px;
   }
 
   .add {
     margin-top: 30px;
+  }
+
+  .navigation {
+      a {
+        color: #EAEFD3;
+        text-decoration: none;
+        padding: 0px 30px;
+        } 
+
+        a:hover {
+        color: #505168;
+        } 
   }
 </style>

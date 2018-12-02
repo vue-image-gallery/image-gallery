@@ -11,8 +11,6 @@
         </label>
         <button>ADD</button>
      </form>
-        
-
 </template>
 
 <script>
