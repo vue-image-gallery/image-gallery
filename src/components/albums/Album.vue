@@ -1,5 +1,5 @@
 <template>
-    <li class="album">
+    <li>
         <RouterLink :to="`/albums/${album.id}`">{{album.title}}</RouterLink>
         <p>{{album.description}}</p>
     </li>
@@ -14,14 +14,14 @@ export default {
 </script>
 
 <style>
-.album {
+li {
     display: flex;
     flex-direction: column;
     align-items: left;
     list-style-type: none;
 }
 
-.album a {
+li a {
     font-size: 1.3em;
     font-weight: 600;
     margin-top: 20px;
