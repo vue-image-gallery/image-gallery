@@ -34,17 +34,17 @@ export default {
   overflow:scroll;
   
 }
-ul h4 {
+.thumbnails h4 {
     background-color:#f7ffe0;
     color:#9f7e69;
     text-align: center;
     padding:10px;
 }
-ul img { 
+.thumbnails img { 
   width: 100%; 
   height: auto; 
 }
-ul p {
+.thumbnails p {
     background-color:#f2efc7;
     color:#2c3e50;
     text-align: center;

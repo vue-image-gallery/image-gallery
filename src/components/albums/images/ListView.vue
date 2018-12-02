@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>I'm a ListView</h3>
-        <ul>
+        <ul class="list">
             <li
                 v-for="(image, index) in images"
                 :key="index">
