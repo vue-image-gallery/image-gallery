@@ -3,6 +3,7 @@
         <nav>
             <span><RouterLink to="/">HOME</RouterLink></span>
             <span><RouterLink to="/albums">ALBUMS</RouterLink></span> 
+            <span><RouterLink to="/about">ABOUT</RouterLink></span> 
         </nav>
     </header>    
 </template>
@@ -14,16 +15,31 @@ export default {
 </script>
 
 <style>
-header{
-    text-align: center;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin:0 auto;
-    height:150px;
-    background-color: aquamarine;
+    padding: 20px;
+    height:75px;
+    background-color: #DCC48E;
+    color: #EAEFD3;
+    font-size: 1.5em;
+    font-weight: 600;
     
 }
-span{
+span {
     padding: 20px;
     
+}
+a {
+    color: #EAEFD3;
+    text-decoration: none;
+    padding: 0px 30px;
+}
+
+a:hover {
+    color: #505168;
 }
 
 </style>

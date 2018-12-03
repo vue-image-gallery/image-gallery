@@ -1,23 +1,30 @@
 <template>
     <section v-if="album">
+    <nav>
+      <p>CHOOSE A VIEW: 
+      <RouterLink to="./thumbnail">THUMBNAIL</RouterLink>
+      <RouterLink to="./list">LIST</RouterLink>
+      <RouterLink to="./gallery">GALLERY</RouterLink>
+      </p>
+    </nav>
     <h2>{{album.title}}</h2>
-    <h3>Images</h3>
+    <p>{{album.description}}<p>
     <p>
-      <button @click="showModal = true">Add a new Image</button>
+      <button class="add" @click="showModal = true">ADD A NEW IMAGE</button>
     </p>
-    <div v-if="showModal" class="modal">
-      <div class="content">
-        Form data goes here.
-      </div>
-    </div>
-    <Thumbnails
-    :images="album.images" />
+    <Modal v-if="showModal" :onClose="() => showModal = false">
+      <AddImage 
+            :onAdd="handleImageAdd"
+            />
+    </Modal>
+    <RouterView :images="album.images">DEFAULT VIEW</RouterView>
     </section>
 </template>
 
 <script>
 import albumsApi from '../../services/albumsApi';
-import Thumbnails from './Thumbnails';
+import AddImage from './images/AddImage';
+import Modal from '../shared/Modal';
 
 export default {
   data() {
@@ -28,10 +35,17 @@ export default {
   },
 
   components:{
-    Thumbnails
+    Modal,
+    AddImage
   },
   created() {
     this.album = albumsApi.getAlbum(this.$route.params.id);
+  },
+  methods: {
+    handleImageAdd(image) {
+      albumsApi.addImage(image, this.album);
+      this.showModal = false;
+    }
   }
 };
 </script>
@@ -50,6 +64,13 @@ export default {
   }
   .content {
     background: white;
-    padding: 50px;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .add {
+    margin-top: 30px;
   }
 </style>
