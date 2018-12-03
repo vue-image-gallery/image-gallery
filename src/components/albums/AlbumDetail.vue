@@ -1,16 +1,16 @@
 <template>
     <section v-if="album">
-    <nav class="navigation">
-      <p>Choose a view: 
-      <RouterLink to="./thumbnail">Thumbnail</RouterLink>
-      <RouterLink to="./list">List</RouterLink>
-      <RouterLink to="./gallery">Gallery</RouterLink>
+    <nav>
+      <p>CHOOSE A VIEW: 
+      <RouterLink to="./thumbnail">THUMBNAIL</RouterLink>
+      <RouterLink to="./list">LIST</RouterLink>
+      <RouterLink to="./gallery">GALLERY</RouterLink>
       </p>
     </nav>
     <h2 class="album-title">{{album.title}}</h2>
     <p>{{album.description}}<p>
     <p>
-      <button class="add" @click="showModal = true">Add a new Image</button>
+      <button class="add" @click="showModal = true">ADD A NEW IMAGE</button>
     </p>
     <Modal v-if="showModal" :onClose="() => showModal = false">
       <AddImage 

@@ -1,6 +1,6 @@
 <template>
     <div class="albums">
-        <button @click="showModal = true">Add a new Album</button>
+        <button @click="showModal = true">ADD A NEW ALBUM</button>
         <h2>Albums</h2>
         <Modal v-if="showModal" :onClose="() => showModal = false">
                       <NewAlbum />

@@ -1,7 +1,7 @@
 <template>
     <div class="list-view">
         <ul>
-            <li 
+            <li
                 v-for="(image, index) in images"
                 :key="index">
                 <p class="list-item"><img class="list-thumb" :src="image.url"></p>
