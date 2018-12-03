@@ -1,9 +1,9 @@
 <template>
-    <header>
+    <header class="header">
         <nav>
-            <span><RouterLink to="/">HOME</RouterLink></span>
-            <span><RouterLink to="/albums">ALBUMS</RouterLink></span> 
-            <span><RouterLink to="/about">ABOUT</RouterLink></span> 
+            <span class="header-links"><RouterLink to="/">HOME</RouterLink></span>
+            <span class="header-links"><RouterLink to="/albums">ALBUMS</RouterLink></span> 
+            <span class="header-links"><RouterLink to="/about">ABOUT</RouterLink></span> 
         </nav>
     </header>    
 </template>
@@ -14,8 +14,8 @@ export default {
 };
 </script>
 
-<style>
-header {
+<style lang="postcss" scoped>
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,18 +28,18 @@ header {
     font-weight: 600;
     
 }
-span {
+.header-links {
     padding: 20px;
     
-}
-a {
-    color: #EAEFD3;
-    text-decoration: none;
-    padding: 0px 30px;
-}
+        a {
+        color: #EAEFD3;
+        text-decoration: none;
+        padding: 0px 30px;
+        } 
 
-a:hover {
-    color: #505168;
+        a:hover {
+        color: #505168;
+        } 
 }
 
 </style>
