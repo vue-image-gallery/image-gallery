@@ -5,7 +5,6 @@
             <li
                 v-for="(image, index) in images"
                 :key="index" class="image-item">
-                <img :src="image.url">
                 <p>{{image.title}}</p>
                 <img :src="image.url">
                 <p>{{ image.description }}</p>
@@ -28,6 +27,15 @@ export default {
 
 ul {
     list-style-type: none;
+}
+.image-item {
+    margin-bottom: 40px;
+}
+
+.image-item img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
 }
 
 </style>
