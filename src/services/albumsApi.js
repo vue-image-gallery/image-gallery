@@ -29,6 +29,7 @@ export default {
     return album;
   },
   addImage(image, album) {
+    image.id = shortid.generate();
     album.images.push(image);
     save();
   }
