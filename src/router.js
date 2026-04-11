@@ -6,15 +6,14 @@ import AlbumDetail from './components/albums/AlbumDetail';
 import ThumbnailView from './components/albums/images/ThumbnailView';
 import ListView from './components/albums/images/ListView';
 import GalleryView from './components/albums/images/GalleryView';
-
-
+import NewAlbum from './components/albums/NewAlbum';
 
 export default new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/albums', component: Albums },
     { path: '/about', component: About },
-
+    { path: '/albums/new', component: NewAlbum },
     { 
       path: '/albums/:id', 
       component: AlbumDetail,
@@ -25,10 +24,6 @@ export default new VueRouter({
         { path: '', redirect: 'gallery' }
       ]
     },
-    
-
-    
     { path: '*', redirect: '/' }
-
   ]
 });
