@@ -4,13 +4,14 @@
         <ul class="list">
             <li
                 v-for="(image, index) in images"
-                :key="index">
+                :key="index" class="image-item">
+                <img :src="image.url">
                 <p>{{image.title}}</p>
-                <p>
-                    <!-- <img :src="image.url"> -->
-                </p>
+                <img :src="image.url">
+                <p>{{ image.description }}</p>
             </li>
         </ul>
+        <p v-if="!images || images.length === 0">No images yet. Add one above!</p>
     </div>
 </template>
 
