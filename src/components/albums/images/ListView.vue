@@ -5,7 +5,7 @@
             <li
                 v-for="(image, index) in images"
                 :key="index">
-                <p>{{image.title}}<p>
+                <p>{{image.title}}</p>
                 <p>
                     <!-- <img :src="image.url"> -->
                 </p>

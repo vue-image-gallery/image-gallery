@@ -1,6 +1,6 @@
 <template>
 <section>
-    <div class="gallery">
+    <div class="gallery" v-if="images && images.length > 0">
         <div class="buttons">
             <button @click="setIndex(-1)">Previous</button>
             <button class="next" @click="setIndex(1)">Next</button>
@@ -9,6 +9,7 @@
         <p class="title">{{image.title}}</p>
         <p>{{image.description}}</p>
     </div>
+    <p v-else>No images yet. Add one above!</p>
 </section>
 </template>
 
