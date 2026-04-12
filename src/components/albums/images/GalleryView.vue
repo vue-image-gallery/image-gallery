@@ -1,71 +1,85 @@
 <template>
 <section>
-    <div class="gallery" v-if="images && images.length > 0">
-        <div class="buttons">
-            <button @click="setIndex(-1)">Previous</button>
-            <button class="next" @click="setIndex(1)">Next</button>
+    <div v-if="images && images.length > 0">
+         <div class="gallery-grid">
+            <div 
+                v-for="(image, index) in images" 
+                :key="index"
+                class="gallery-item"
+                @click="openLightbox(index)">
+                <img :src="image.url" :alt="image.title">
+                <p class="title">{{ image.title }}</p>
+            </div>
         </div>
-        <img :src="image.url">
-        <p class="title">{{image.title}}</p>
-        <p>{{image.description}}</p>
+        <CoolLightBox
+            :items="lightboxImages"
+            :index="lightboxIndex"
+            @close="lightboxIndex = null">
+        </CoolLightBox>
     </div>
     <p v-else>No images yet. Add one above!</p>
 </section>
 </template>
 
 <script>
+
+import CoolLightBox from 'vue-cool-lightbox';
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
+
 export default {
+  components: {
+    CoolLightBox
+  },
   data() {
     return {
-      selectedIndex: 0
+      lightboxIndex: null
     };
   },  
   props: {
     images: Array 
   },
   computed: {
-    image() {
-      return this.images[this.selectedIndex];
+    lightboxImages() {
+      return this.images.map(image => ({
+        src: image.url,
+        title: image.title,
+        description: image.description
+      }));
     }
   },
   methods: {
-    setIndex(amt) {
-      this.selectedIndex += amt;
-      if(this.selectedIndex === this.images.length) {
-        this.selectedIndex = 0;
-      }
-      else if(this.selectedIndex < 0) {
-        this.selectedIndex = this.images.length - 1;
-      }
-    } 
+    openLightbox(index) {
+      this.lightboxIndex = index;
+    }
   }
 };
 </script>
 
 <style>
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    padding: 20px;
 }
 
-ul {
-    list-style-type: none;
+.gallery-item {
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.gallery {
-    justify-content: center;
-    width: 500px;
-}
-
-.gallery img {
+.gallery-item img {
     width: 100%;
-    height: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
 }
 
-.buttons {
-    justify-content: flex-end;
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
+
 
 .title {
     font-size: 1.2em;
