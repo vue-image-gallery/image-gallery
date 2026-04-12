@@ -47,6 +47,7 @@ export default {
     saveEdit(image) {
       image.title = this.editForm.title;
       image.description = this.editForm.description;
+      albumsApi.updateImage(this.album, image);
       this.editingIndex = null;
     }
   }
