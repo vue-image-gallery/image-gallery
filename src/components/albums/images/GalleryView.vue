@@ -14,9 +14,10 @@
         <CoolLightBox
           :items="lightboxImages"
           :index="lightboxIndex"
+          :gallery="true"
           :slideshow="false"
           effect="fade"
-          thumbsPosition="bottom"
+          thumbsPosition="top"
           @close="lightboxIndex = null">
         </CoolLightBox>
     </div>
