@@ -17,7 +17,7 @@
             :onAdd="handleImageAdd"
             />
     </Modal>
-    <RouterView :images="album.images">DEFAULT VIEW</RouterView>
+    <RouterView :images="album.images" :album="album">DEFAULT VIEW</RouterView>
     </section>
 </template>
 
