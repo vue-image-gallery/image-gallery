@@ -11,6 +11,7 @@
   "dependencies": {
     "shortid": "^2.2.14",
     "vue": "^2.5.17",
+    "vue-cool-lightbox": "^2.7.5",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
