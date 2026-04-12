@@ -45,6 +45,7 @@ export default {
     lightboxImages() {
       return this.images.map(image => ({
         src: image.url,
+         thumb: image.url,
         title: image.title,
         description: image.description
       }));
