@@ -24,7 +24,8 @@
 <script>
 export default {
   props: {
-    images: Array 
+    images: Array, 
+    album:Object
   },
   data() {
     return {
