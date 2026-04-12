@@ -32,7 +32,12 @@ export default {
     image.id = shortid.generate();
     album.images.push(image);
     save();
-  }
+  },
+  updateImage(album, updatedImage) {
+    const index = album.images.findIndex(img => img.id === updatedImage.id);
+  album.images.splice(index, 1, updatedImage);
+save();
+}
 };
 
 
