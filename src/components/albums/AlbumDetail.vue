@@ -2,9 +2,9 @@
     <section v-if="album">
     <nav>
       <p>CHOOSE A VIEW: 
-      <RouterLink to="./thumbnail">THUMBNAIL</RouterLink>
-      <RouterLink to="./list">LIST</RouterLink>
-      <RouterLink to="./gallery">GALLERY</RouterLink>
+      <RouterLink :to="`/albums/${album.id}/thumbnail`">THUMBNAIL</RouterLink>
+      <RouterLink :to="`/albums/${album.id}/list`">LIST</RouterLink>
+      <RouterLink :to="`/albums/${album.id}/gallery`">GALLERY</RouterLink>
       </p>
     </nav>
     <h2>{{album.title}}</h2>
