@@ -12,9 +12,12 @@
             </div>
         </div>
         <CoolLightBox
-            :items="lightboxImages"
-            :index="lightboxIndex"
-            @close="lightboxIndex = null">
+          :items="lightboxImages"
+          :index="lightboxIndex"
+          :slideshow="false"
+          effect="fade"
+          thumbsPosition="bottom"
+          @close="lightboxIndex = null">
         </CoolLightBox>
     </div>
     <p v-else>No images yet. Add one above!</p>
