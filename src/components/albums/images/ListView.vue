@@ -8,13 +8,13 @@
                 <div v-if="editingIndex === index">
                     <input v-model="editForm.title" placeholder="Title">
                     <input v-model="editForm.description" placeholder="Description">
-                    <button @click="saveEdit(image)">SAVE</button>
-                    <button @click="editingIndex = null">CANCEL</button>
+                    <button class="btn-save" @click="saveEdit(image)">SAVE</button>
+                    <button class="btn-cancel" @click="editingIndex = null">CANCEL</button>
                 </div>
                 <p>{{image.title}}</p>
                 <img :src="image.url">
                 <p>{{ image.description }}</p>
-                <button @click="startEdit(index, image)">EDIT</button>
+                <button class="btn-edit" @click="startEdit(index, image)">EDIT</button>
             </li>
         </ul>
         <p v-if="!images || images.length === 0">No images yet. Add one above!</p>
@@ -65,5 +65,8 @@ ul {
     max-width: 600px;
     display: block;
 }
+.btn-edit{width:80px}
+.btn-save{}
+.btn-cancel{}
 
 </style>
